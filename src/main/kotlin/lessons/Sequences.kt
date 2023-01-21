@@ -1,3 +1,5 @@
+package lessons
+
 fun main() {
     val strNumbers = listOf("One", "Two", "Three", "Four")
 
@@ -14,5 +16,5 @@ fun main() {
     // operations stateless - state is not required -> map, filter
     // op stateful - require state -> shorted
     // op intermediate - generates another sequence -> map, filter
-    // op terminal - starts sequence execution -> toList, sum
+    // op terminal - starts sequence execution -> toList, lessons.sum
 }

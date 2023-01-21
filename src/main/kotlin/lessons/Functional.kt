@@ -1,4 +1,4 @@
-import kotlin.reflect.full.*
+package lessons
 
 /*
     run() returns the result of applying the function
@@ -40,7 +40,8 @@ annotation class OnGet
 @Target(AnnotationTarget.PROPERTY_SETTER)
 annotation class OnSet
 
-@ImAPlant class Plant {
+@ImAPlant
+class Plant {
     @get:OnGet
     val isGrowing: Boolean = true
 
