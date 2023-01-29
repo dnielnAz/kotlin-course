@@ -1,7 +1,7 @@
 package challenges
 
 fun main() {
-    val list = KLinkedList()
+    val list = SinglyLinkedList()
 
     println(list.toString())
 
@@ -30,7 +30,7 @@ fun main() {
 
     println("---------------------------------------------------------------------------------------------------------")
 
-    val listRecursive = KLinkedList()
+    val listRecursive = SinglyLinkedList()
 
     println(listRecursive.toStringRecursive())
 
@@ -58,17 +58,17 @@ fun main() {
     println(listRecursive.toStringRecursive())
 }
 
-data class Node(val value: String) {
-    var next: Node? = null
+data class SinglyNode(val value: String) {
+    var next: SinglyNode? = null
 }
 
-class KLinkedList {
-    var head: Node? = null
+class SinglyLinkedList {
+    var head: SinglyNode? = null
 
 
     fun add(value: String) {
         if (head == null) {
-            head = Node(value)
+            head = SinglyNode(value)
         } else {
             var current = head
 
@@ -76,21 +76,21 @@ class KLinkedList {
                 current = current.next
             }
 
-            current?.next = Node(value)
+            current?.next = SinglyNode(value)
         }
     }
 
     fun addRecursive(value: String) {
         if (head == null) {
-            head = Node(value)
+            head = SinglyNode(value)
         } else {
             addRecursive(head, value)
         }
     }
 
-    private fun addRecursive(current: Node?, value: String) {
+    private fun addRecursive(current: SinglyNode?, value: String) {
         if (current?.next == null) {
-            current?.next = Node(value)
+            current?.next = SinglyNode(value)
             return
         } else {
             addRecursive(current.next, value)
@@ -101,8 +101,8 @@ class KLinkedList {
         if (head?.value == value) {
             head = head?.next
         } else {
-            var previous: Node? = null
-            var current: Node? = head
+            var previous: SinglyNode? = null
+            var current: SinglyNode? = head
 
             while (current != null) {
                 if (current.value == value) {
@@ -124,7 +124,7 @@ class KLinkedList {
         }
     }
 
-    private fun removeRecursive(current: Node?, previous: Node?, value: String) {
+    private fun removeRecursive(current: SinglyNode?, previous: SinglyNode?, value: String) {
         if (current == null) {
             return
         }
@@ -155,7 +155,7 @@ class KLinkedList {
         return containsRecursive(head, value)
     }
 
-    private fun containsRecursive(current: Node?, value: String): Boolean {
+    private fun containsRecursive(current: SinglyNode?, value: String): Boolean {
         return if (current == null) {
             false
         } else if (current.value == value) {
@@ -166,8 +166,8 @@ class KLinkedList {
     }
 
     fun reverse() {
-        var previous: Node? = null
-        var current: Node? = head
+        var previous: SinglyNode? = null
+        var current: SinglyNode? = head
 
         while (current != null) {
             val next = current.next
@@ -184,7 +184,7 @@ class KLinkedList {
         head = reverseRecursive(null, head)
     }
 
-    private fun reverseRecursive(previous: Node?, current: Node?): Node? {
+    private fun reverseRecursive(previous: SinglyNode?, current: SinglyNode?): SinglyNode? {
         if (current == null) {
             return previous
         }
@@ -219,7 +219,7 @@ class KLinkedList {
         return string
     }
 
-    private fun toStringRecursive(current: Node?, string: String): String {
+    private fun toStringRecursive(current: SinglyNode?, string: String): String {
         return if (current == null) {
             string
         } else {
