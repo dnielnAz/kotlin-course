@@ -223,7 +223,7 @@ class SinglyLinkedList {
         return if (current == null) {
             string
         } else {
-            toStringRecursive(current.next, string + " ${current.value} \uD83E\uDC06")
+            toStringRecursive(current.next, string + " ${current.value} ➞")
         }
     }
 }
