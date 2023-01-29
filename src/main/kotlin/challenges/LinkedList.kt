@@ -200,7 +200,7 @@ class SinglyLinkedList {
         var current = head
 
         while (current != null) {
-            string += " ${current.value} ->"
+            string += " ${current.value} \uD83E\uDC06"
             current = current.next
         }
 
@@ -223,7 +223,7 @@ class SinglyLinkedList {
         return if (current == null) {
             string
         } else {
-            toStringRecursive(current.next, string + " ${current.value} ->")
+            toStringRecursive(current.next, string + " ${current.value} \uD83E\uDC06")
         }
     }
 }
