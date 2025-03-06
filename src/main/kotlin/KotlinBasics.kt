@@ -6,7 +6,7 @@ import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 import kotlin.reflect.KProperty
 
-fun main() {
+fun kotlinBasics() {
     dsl()
 }
 

@@ -1,33 +1,30 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.5.10"
-    application
+    id("org.jetbrains.kotlin.jvm") version ("1.9.25")
 }
 
-group = "me.thefr"
+group = "xyz.dnieln7"
 version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation(kotlin("test"))
-    implementation(kotlin("reflect"))
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0")
-    implementation("io.arrow-kt:arrow-core:1.0.1")
-    implementation("joda-time:joda-time:2.12.5")
-}
-
-tasks.test {
-    useJUnitPlatform()
+extensions.configure<JavaPluginExtension> {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "11"
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_17.toString()
+    }
 }
 
-application {
-    mainClass.set("MainKt")
+dependencies {
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
+    implementation("io.arrow-kt:arrow-core:1.0.1")
+
+    testImplementation("junit:junit:4.13.2")
 }
