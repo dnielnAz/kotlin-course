@@ -1,4 +1,4 @@
-package challenges
+package challenges.structures
 
 fun main() {
     val stack = ArrayStack(10)

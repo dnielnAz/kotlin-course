@@ -1,4 +1,4 @@
-package tests
+package other
 
 import kotlinx.coroutines.*
 

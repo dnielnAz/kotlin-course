@@ -1,4 +1,4 @@
-package lessons
+package courses.basics
 
 /**
  * The methods of an interface are implemented by a helper (or delegate) object, which is then used by a class.

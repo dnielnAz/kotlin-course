@@ -1,4 +1,4 @@
-package lessons
+package courses.basics
 
 import java.text.SimpleDateFormat
 import java.time.Instant

@@ -1,4 +1,4 @@
-package challenges
+package challenges.structures
 
 fun main() {
     val ringBuffer = RingBuffer<Int>(5)

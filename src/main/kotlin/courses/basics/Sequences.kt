@@ -1,4 +1,4 @@
-package lessons
+package courses.basics
 
 fun main() {
     val strNumbers = listOf("One", "Two", "Three", "Four")

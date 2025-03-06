@@ -1,4 +1,4 @@
-package challenges
+package challenges.structures
 
 fun main() {
     val priorityQueue = PriorityQueue(4)

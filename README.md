@@ -1,7 +1,3 @@
-# Kotlin course
+# Kotlin playground
 
-Contents
-
-* Google code labs kotlin fundamentals course
-* Test functions
-* Code challenges
+Compilation of challenges, courses examples, etc.

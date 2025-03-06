@@ -1,4 +1,4 @@
-package lessons
+package courses.basics
 
 /*
     run() returns the result of applying the function

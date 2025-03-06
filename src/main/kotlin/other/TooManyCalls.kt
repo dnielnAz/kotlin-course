@@ -1,8 +1,9 @@
-package tests
+package other
 
-import kotlinx.coroutines.*
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.sync.Mutex
-import kotlinx.coroutines.sync.withLock
 import java.time.LocalTime
 
 fun main() {

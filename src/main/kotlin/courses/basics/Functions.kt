@@ -1,4 +1,4 @@
-package lessons
+package courses.basics
 
 /**
  * Behaves like if / if else

@@ -1,4 +1,4 @@
-package lessons/*
+package courses.basics/*
     The value for const val is determined at compile time
     The value for val is determined during program execution
     val can be assigned by a function.
